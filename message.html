@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Words</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fdfcfb, #e2ebf0);
+            font-family: system-ui, sans-serif;
+            padding: 16px;
+        }
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 560px;
+            padding: 28px;
+            border-radius: 20px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+        }
+        h1 { text-align: center; color: #2f3e46; }
+        p { text-align: center; color: #555; }
+        textarea {
+            width: 100%;
+            min-height: 160px;
+            padding: 16px;
+            border-radius: 14px;
+            border: 1.5px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 14px;
+            background: #52b788;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>You can write freely</h1>
+    <p>I will read everything with care and respect.</p>
+
+    <form method="POST" action="/message">
+        <textarea name="message" placeholder="Write whatever you feel…" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+</body>
+</html>
+
