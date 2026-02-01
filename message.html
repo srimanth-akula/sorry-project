@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>A Message From Your Heart</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>You can tell me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-
     body {
       margin: 0;
       min-height: 100vh;
-      background: linear-gradient(135deg, #fdfbfb, #ebedee);
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      font-family: system-ui, sans-serif;
       padding: 20px;
     }
 
@@ -47,17 +43,10 @@
     textarea {
       width: 100%;
       min-height: 140px;
-      resize: none;
       padding: 14px;
       border-radius: 12px;
       border: 1.5px solid #ddd;
       font-size: 14px;
-      outline: none;
-      transition: border 0.2s;
-    }
-
-    textarea:focus {
-      border-color: #7c7cff;
     }
 
     button {
@@ -66,22 +55,27 @@
       padding: 14px;
       border: none;
       border-radius: 12px;
-      background: linear-gradient(135deg, #7c7cff, #5a5aff);
+      background: #7c7cff;
       color: white;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
     }
 
-    button:active {
-      transform: scale(0.98);
+    .after {
+      display: none;
+      margin-top: 20px;
     }
 
-    .note {
-      margin-top: 14px;
-      font-size: 12px;
-      color: #999;
+    .after a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: #5a5aff;
+      color: white;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -91,16 +85,14 @@
     <h1>If you want to tell me something</h1>
 
     <p>
-      You don’t have to rush.  
-      Write only if and when you feel ready.  
-      I will read every word with respect.
+      Write only if you feel comfortable.  
+      I will read everything with care.
     </p>
 
     <form
       action="https://docs.google.com/forms/d/e/1FAIpQLSeXF8Lu_SqBr0pp5Ed6K8UT1VC8gMGWYlexGWXGlwZ5E4z7FQ/formResponse"
       method="POST"
-      target="hidden_iframe"
-      onsubmit="submitted=true; setTimeout(() => window.location.href='together.html', 900);">
+      onsubmit="document.getElementById('after').style.display='block';">
 
       <textarea
         name="entry.1906636634"
@@ -110,20 +102,11 @@
       <button type="submit">Send</button>
     </form>
 
-    <div class="note">
-      Your words are safe. I’ll see them.
+    <div class="after" id="after">
+      <p>Thank you for writing.</p>
+      <a href="together.html">Continue</a>
     </div>
   </div>
-
-  <!-- Hidden iframe to avoid redirect -->
-  <iframe
-    name="hidden_iframe"
-    style="display:none;"
-    onload="if(submitted){}"></iframe>
-
-  <script>
-    let submitted = false;
-  </script>
 </body>
 </html>
 
