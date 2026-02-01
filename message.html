@@ -1,60 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Words</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #fdfcfb, #e2ebf0);
-            font-family: system-ui, sans-serif;
-            padding: 16px;
-        }
-        .container {
-            background: white;
-            width: 100%;
-            max-width: 560px;
-            padding: 28px;
-            border-radius: 20px;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-        }
-        h1 { text-align: center; color: #2f3e46; }
-        p { text-align: center; color: #555; }
-        textarea {
-            width: 100%;
-            min-height: 160px;
-            padding: 16px;
-            border-radius: 14px;
-            border: 1.5px solid #ccc;
-            font-size: 16px;
-        }
-        button {
-            margin-top: 20px;
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 14px;
-            background: #52b788;
-            color: white;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <h1>You can write freely</h1>
-    <p>I will read everything with care and respect.</p>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You can tell me 🤍</title>
 
-    <form method="POST" action="/message">
-        <textarea name="message" placeholder="Write whatever you feel…" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-</div>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: system-ui, sans-serif;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      max-width: 520px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #7a003c;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 28px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    a:hover {
+      background: #1ebe5d;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>If you want to tell me something</h1>
+
+    <p>
+      You don’t have to.  
+      Only if you feel comfortable and ready.
+    </p>
+
+    <!-- REPLACE NUMBER BELOW -->
+    <a href="https://wa.me/9059133773" target="_blank">
+      Open WhatsApp
+    </a>
+  </div>
 </body>
 </html>
 
